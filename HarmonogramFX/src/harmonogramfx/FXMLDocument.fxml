@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="harmonogramfx.FXMLDocumentController">
+    <children>
+      <TabPane prefHeight="480.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Przedmioty">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="308.0">
+                     <children>
+                        <Button fx:id="button" layoutX="468.0" layoutY="395.0" onAction="#handleButtonAction" text="Polacz!" />
+                        <Label fx:id="label" layoutX="557.0" layoutY="420.0" minHeight="16" minWidth="69" />
+                        <TableView fx:id="tablePrzedmioty" layoutX="14.0" layoutY="14.0" prefHeight="419.0" prefWidth="197.0">
+                          <columns>
+                            <TableColumn fx:id="columnidPrzedmioty" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="columnNazwaPrzedmioty" prefWidth="75.0" text="Nazwa" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txtUsunPrzedmioty" disable="true" layoutX="499.0" layoutY="114.0" prefHeight="25.0" prefWidth="29.0" />
+                        <Button fx:id="btnUsunPrzedmioty" layoutX="479.0" layoutY="148.0" mnemonicParsing="false" onAction="#onClickUsunPrzedmioty" text="Usun" />
+                        <ComboBox fx:id="comboNazwaPrzedmiotu" layoutX="378.0" layoutY="114.0" prefHeight="25.0" prefWidth="117.0" />
+                        <TextField fx:id="txtDodajIdPrzedmioty" layoutX="379.0" layoutY="10.0" />
+                        <TextField fx:id="txtDodajNazwaPrzedmioty" layoutX="379.0" layoutY="41.0" />
+                        <Button fx:id="btnDodajPrzedmiot" layoutX="476.0" layoutY="77.0" mnemonicParsing="false" onAction="#onClickDodajPrzedmioty" text="Dodaj" />
+                        <Button fx:id="btnEdytujPrzedmioty" layoutX="421.0" layoutY="148.0" mnemonicParsing="false" onAction="#onClickEdytujPrzedmioty" text="Edytuj" />
+                        <Label layoutX="214.0" layoutY="14.0" text="Podaj numer przedmiotu:" />
+                        <Label layoutX="214.0" layoutY="45.0" text="Podaj nazwe przedmiotu:" />
+                        <Label layoutX="221.0" layoutY="104.0" prefHeight="45.0" prefWidth="128.0" text="Wybierz przedmiot do &#10;Usuniecia/Edycji:" />
+                        <TextField fx:id="txtdocombotest" layoutX="436.0" layoutY="363.0" />
+                        <DatePicker fx:id="datepicker" layoutX="424.0" layoutY="256.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Pracownicy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablePracownicy" layoutY="-1.0" prefHeight="183.0" prefWidth="640.0">
+                          <columns>
+                            <TableColumn fx:id="columnidPracownicy" prefWidth="75.0" text="id" />
+                            <TableColumn fx:id="columnPlec" prefWidth="75.0" text="Plec" />
+                              <TableColumn fx:id="columnPesel" prefWidth="75.0" text="Pesel" />
+                              <TableColumn fx:id="columnImie" prefWidth="75.0" text="Imie" />
+                              <TableColumn fx:id="columnNazwisko" prefWidth="75.0" text="Nazwisko" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txtDodajidPracownicy" layoutX="114.0" layoutY="182.0" />
+                        <TextField fx:id="txtDodajPlec" layoutX="114.0" layoutY="213.0" />
+                        <Label layoutX="18.0" layoutY="186.0" text="Podaj ID:" />
+                        <Label layoutX="17.0" layoutY="217.0" text="Podaj Plec:" />
+                        <Label layoutX="17.0" layoutY="246.0" text="Podaj PESEL:" />
+                        <Label layoutX="17.0" layoutY="273.0" text="Podaj Imie:" />
+                        <Label layoutX="19.0" layoutY="301.0" text="Podaj Nazwisko:" />
+                        <TextField fx:id="txtDodajPesel" layoutX="114.0" layoutY="242.0" />
+                        <TextField fx:id="txtDodajImie" layoutX="114.0" layoutY="269.0" />
+                        <TextField fx:id="txtDodajNazwisko" layoutX="114.0" layoutY="297.0" />
+                        <Button fx:id="btnDodajPracownika" layoutX="211.0" layoutY="330.0" mnemonicParsing="false" onAction="#onClickDodajPracownika" text="Dodaj" />
+                        <Button fx:id="btnEdytujPracownika" layoutX="216.0" layoutY="379.0" mnemonicParsing="false" onAction="#onClickEdytujPracownika" text="Edytuj" />
+                        <Button fx:id="btnUsunPracownika" layoutX="219.0" layoutY="412.0" mnemonicParsing="false" onAction="#onClickUsunPracownika" text="Usun" />
+                        <Label layoutX="14.0" layoutY="358.0" text="Wybierz Pracownika do Edytowania/Usuwania:" />
+                        <TextField fx:id="txtEdytujIdPracownika" disable="true" layoutX="171.0" layoutY="379.0" prefHeight="25.0" prefWidth="29.0" />
+                        <ComboBox fx:id="comboNazwaPracownik" layoutX="15.0" layoutY="379.0" prefWidth="150.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Sale">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableSale" layoutX="14.0" layoutY="14.0" prefHeight="419.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="columnidSale" prefWidth="75.0" text="Numer sali" />
+                            <TableColumn fx:id="columniloscStudentow" prefWidth="75.0" text="Pomiesci" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="214.0" layoutY="14.0" text="Podaj numer Sali:" />
+                        <Label layoutX="214.0" layoutY="45.0" text="Podaj ilosc studentow:" />
+                        <Label layoutX="214.0" layoutY="110.0" text="Podaj numer do Usuniecia &#10;lub Edycji" />
+                        <TextField fx:id="txtDodajIdSali" layoutX="379.0" layoutY="10.0" />
+                        <TextField fx:id="txtDodajIloscStudentow" layoutX="379.0" layoutY="41.0" />
+                        <TextField fx:id="txtEdytujIdSali" layoutX="541.0" layoutY="114.0" prefHeight="25.0" prefWidth="25.0" visible="false" />
+                        <Button fx:id="btnDodajSale" layoutX="476.0" layoutY="77.0" mnemonicParsing="false" onAction="#onClickDodajSale" text="Dodaj" />
+                        <Button fx:id="btnUsunSale" layoutX="479.0" layoutY="148.0" mnemonicParsing="false" onAction="#onClickUsunSale" text="Usun" />
+                        <Button fx:id="btnEdytujSale" layoutX="421.0" layoutY="148.0" mnemonicParsing="false" onAction="#onClickEdytujSale" text="Edytuj" />
+                        <ComboBox fx:id="comboNumerSali" layoutX="379.0" layoutY="114.0" prefHeight="25.0" prefWidth="148.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Rozklady">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableRozklady" layoutX="14.0" layoutY="14.0" prefHeight="318.0" prefWidth="616.0">
+                          <columns>
+                            <TableColumn fx:id="columnRozkladSale" prefWidth="75.0" text="Numer sali" />
+                            <TableColumn fx:id="columnRozkladDzien" prefWidth="75.0" text="Dzien" />
+                              <TableColumn fx:id="columnRozkladPracownik" prefWidth="119.0" text="idPracownika" />
+                              <TableColumn fx:id="columnRozkladyPrzedmiot" prefWidth="85.0" text="idPrzedmioty" />
+                          </columns>
+                        </TableView>
+                        <ComboBox fx:id="comboRozkladyIdSale" layoutX="14.0" layoutY="345.0" prefHeight="25.0" prefWidth="59.0" />
+                        <DatePicker fx:id="DataPickerRozklady" layoutX="80.0" layoutY="345.0" prefHeight="25.0" prefWidth="107.0" />
+                        <TextField fx:id="txtRozkladyGodzina" layoutX="195.0" layoutY="345.0" prefHeight="25.0" prefWidth="29.0" />
+                        <TextField fx:id="txtRozkladyMinuty" layoutX="231.0" layoutY="345.0" prefHeight="25.0" prefWidth="30.0" />
+                        <TextField fx:id="txtRozkladySekundy" layoutX="268.0" layoutY="345.0" prefHeight="25.0" prefWidth="30.0" />
+                        <ComboBox fx:id="ComboRozkladyPracownicy" layoutX="307.0" layoutY="345.0" prefWidth="150.0" />
+                        <ComboBox fx:id="comboRozkladyPrzedmioty" layoutX="470.0" layoutY="345.0" prefWidth="150.0" />
+                        <TextField fx:id="txtRozkladyNumerSali" layoutX="14.0" layoutY="379.0" prefHeight="25.0" prefWidth="51.0" />
+                        <TextField fx:id="txtRozkladyPracownicy" layoutX="298.0" layoutY="379.0" />
+                        <TextField fx:id="txtRozkladyPrzedmioty" layoutX="471.0" layoutY="379.0" />
+                        <TextField fx:id="textRozkladyData" layoutX="80.0" layoutY="379.0" />
+                        <Button fx:id="btnZajmijSale" layoutX="484.0" layoutY="412.0" mnemonicParsing="false" onAction="#onClickZajmijSale" prefHeight="25.0" prefWidth="68.0" text="Zajmij!" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
